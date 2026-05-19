@@ -1,11 +1,11 @@
 export class PostCreateDto {
-  userId: string | undefined;
+  userId!: string;
 
-  content: string | undefined;
+  content!: string;
 }
 
 export class PostReturnDto {
-  id: string | undefined;
+  id!: string;
 
-  createdAt: Date | undefined;
+  createdAt!: Date;
 }

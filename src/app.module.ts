@@ -1,6 +1,10 @@
 import { Module } from '@nestjs/common';
 import { PrismaModule } from './infra/database/prisma.module';
 import { ConfigModule } from '@nestjs/config';
+import { CommentModule } from './modules/comment/comment.module';
+import { LikeModule } from './modules/like/like.module';
+import { PostModule } from './modules/post/post.module';
+import { UserModule } from './modules/user/user.module';
 
 @Module({
   imports: [
@@ -8,6 +12,10 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal: true,
     }),
     PrismaModule,
+    CommentModule,
+    LikeModule,
+    PostModule,
+    UserModule,
   ],
   controllers: [],
   providers: [],

@@ -1,9 +1,9 @@
 export class LikeCreateDto {
-  userId: string | undefined;
+  userId!: string;
 
-  postId: string | undefined;
+  postId!: string;
 }
 
 export class LikeReturnDto {
-  likeDate: Date | undefined;
+  likeDate!: Date;
 }

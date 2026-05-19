@@ -1,13 +1,13 @@
 export class CommentCreateDto {
-  content: string | undefined;
+  content!: string;
 
-  userId: string | undefined;
+  userId!: string;
 
-  postId: string | undefined;
+  postId!: string;
 }
 
 export class CommentReturnDto {
   id!: string;
 
-  createdAt: Date | undefined;
+  createdAt!: Date;
 }

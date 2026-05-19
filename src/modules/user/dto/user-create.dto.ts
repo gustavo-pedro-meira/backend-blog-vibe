@@ -1,13 +1,13 @@
 export class UserCreateDto {
-  name: string | undefined;
+  name!: string;
 
-  email: string | undefined;
+  email!: string;
 
-  password: string | undefined;
+  password!: string;
 }
 
 export class UserReturnDto {
-  id: string | undefined;
+  id!: string;
 
-  createdAt: Date | undefined;
+  createdAt!: Date;
 }
