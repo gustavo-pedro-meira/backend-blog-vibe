@@ -6,6 +6,7 @@ import {
 import { PrismaService } from 'src/infra/database/prisma.service';
 import { UserCreateDto } from './dto/user-create.dto';
 import { UserUpdateDto } from './dto/user-update.dto';
+import { hash } from 'bcrypt';
 
 @Injectable()
 export class UserService {
@@ -44,9 +45,12 @@ export class UserService {
   async create(userCreateDto: UserCreateDto) {
     await this.userExistEmail(userCreateDto.email);
 
+    const passswordHashe = await hash(userCreateDto.password, 10);
+
     return await this.prisma.user.create({
       data: {
         ...userCreateDto,
+        password: passswordHashe,
       },
     });
   }

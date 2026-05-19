@@ -27,6 +27,9 @@ export class CommentService {
       data: {
         ...commentCreateDto,
       },
+      include: {
+        user: true,
+      },
     });
   }
 
